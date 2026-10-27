@@ -1,0 +1,225 @@
+<!-- Paras Gupta — personal site v1. Single file. Host on GitHub Pages / Vercel / Cloudflare Pages as index.html -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paras Gupta — Forward Deployed Engineering, Healthcare AI</title>
+<meta name="description" content="Paras Gupta leads forward deployed engineering for healthcare AI agents, taking them from demo to production with US health systems and payers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F3F0;
+  --ink:#16252D;
+  --muted:#56666E;
+  --rule:#C6CEC9;
+  --cobalt:#2846C8;
+  --before:#B9C2BE;
+  --surface:#E6EAE6;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#10181D;
+    --ink:#E4E9E6;
+    --muted:#98A6A4;
+    --rule:#2C3A40;
+    --cobalt:#8EA4FF;
+    --before:#3A4A50;
+    --surface:#172228;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.0625rem;line-height:1.55;font-variation-settings:"opsz" 14;
+}
+a{color:var(--cobalt);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.wrap{max-width:46rem;margin-inline:auto;padding-inline:1.5rem}
+
+/* Hero */
+header{padding:5.5rem 0 3.5rem}
+.name{
+  font-size:clamp(3rem,11vw,6.5rem);line-height:.9;margin:0;
+  font-weight:800;letter-spacing:-.035em;font-variation-settings:"opsz" 96;
+}
+.claim{
+  font-size:clamp(1.35rem,3.4vw,1.85rem);line-height:1.25;margin:1.6rem 0 0;
+  font-weight:400;max-width:30ch;font-variation-settings:"opsz" 40;
+}
+.role{color:var(--muted);margin:1.25rem 0 0;max-width:52ch}
+.links{display:flex;flex-wrap:wrap;gap:1.25rem;margin-top:1.75rem;font-weight:600}
+
+h2{
+  font-size:1.6rem;line-height:1.15;margin:0 0 .75rem;font-weight:700;
+  letter-spacing:-.015em;font-variation-settings:"opsz" 48;
+}
+section{padding:3.25rem 0;border-top:1px solid var(--rule)}
+p{margin:0 0 1rem;max-width:62ch}
+.lede{color:var(--muted)}
+
+/* Compression module — the one bold thing */
+.compress{background:var(--surface);border-radius:14px;padding:1.75rem 1.5rem 1.5rem;margin:1.5rem -1.5rem 0}
+@media (min-width:900px){.compress{margin-inline:-4rem;padding:2.25rem 4rem 2rem}}
+.eras{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.75rem;padding:0;list-style:none}
+.eras button{
+  font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;
+  padding:.5rem .9rem;border-radius:999px;border:1px solid var(--rule);
+  background:transparent;color:var(--ink);
+}
+.eras button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.metric{font-size:1.15rem;font-weight:600;margin:0 0 1.25rem}
+.bar-row{display:grid;grid-template-columns:4.5rem 1fr;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-row span{font-size:.9rem;color:var(--muted)}
+.track{height:2.25rem;position:relative}
+.bar{
+  height:100%;border-radius:4px;display:flex;align-items:center;padding:0 .7rem;
+  font-weight:700;font-size:.95rem;white-space:nowrap;min-width:fit-content;
+  transition:width .7s cubic-bezier(.2,.7,.2,1);
+}
+.bar.b{background:var(--before);color:var(--ink)}
+.bar.a{background:var(--cobalt);color:var(--paper)}
+.ratio{
+  font-size:clamp(2.6rem,7vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1;
+  margin:1.5rem 0 .35rem;font-variation-settings:"opsz" 96;
+}
+.how{color:var(--muted);margin:0;max-width:58ch}
+
+/* Work */
+.case{margin-top:2.25rem}
+.case h3{font-size:1.2rem;margin:0 0 .4rem;font-weight:700}
+.case .scope{color:var(--muted);font-size:.95rem;margin-bottom:.6rem}
+
+/* Principles */
+.principles{margin:1.25rem 0 0;padding:0;list-style:none}
+.principles li{padding:1rem 0;border-bottom:1px solid var(--rule);max-width:62ch}
+.principles li:last-child{border-bottom:0}
+.principles strong{display:block;font-size:1.08rem;margin-bottom:.2rem}
+
+/* Timeline — a real sequence, so years earn their place */
+.timeline{margin:1.25rem 0 0;padding:0;list-style:none}
+.timeline li{display:grid;grid-template-columns:8.5rem 1fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--rule)}
+.timeline li:last-child{border-bottom:0}
+.yr{color:var(--muted);font-variant-numeric:tabular-nums;font-size:.95rem;padding-top:.1rem}
+.timeline b{display:block}
+.timeline small{color:var(--muted);font-size:.95rem}
+
+footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);font-size:.95rem}
+
+@media (max-width:560px){
+  header{padding:3.5rem 0 2.5rem}
+  .timeline li{grid-template-columns:1fr;gap:.15rem}
+  .compress{padding:1.25rem 1rem}
+}
+@media (prefers-reduced-motion:reduce){.bar{transition:none}}
+</style>
+
+<header class="wrap">
+  <h1 class="name">Paras<br>Gupta</h1>
+  <p class="claim">I get healthcare AI agents out of the demo and into production.</p>
+  <p class="role">I lead Forward Deployed Engineering at Innovaccer: a team that scopes, builds, and ships voice and chat agents for US health systems and payers. Before that, ten years making data pipelines boringly fast at Innovaccer and Barclays.</p>
+  <nav class="links" aria-label="Contact">
+    <a href="mailto:parasgupta301@gmail.com">Email me</a>
+    <a href="https://linkedin.com/in/parasgupta301">LinkedIn</a>
+    <a href="Paras_Gupta_Resume.pdf">Download resume (PDF)</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap" aria-labelledby="compress-h">
+    <h2 id="compress-h">The work, in one habit: making slow things fast</h2>
+    <p class="lede">Every role I've held came down to taking a process that took weeks and making it take days, then minutes. Pick an era.</p>
+    <div class="compress">
+      <ul class="eras" role="list">
+        <li><button type="button" data-era="0" aria-pressed="false">Barclays</button></li>
+        <li><button type="button" data-era="1" aria-pressed="false">Clinical data, 2023</button></li>
+        <li><button type="button" data-era="2" aria-pressed="false">Activation, 2023–24</button></li>
+        <li><button type="button" data-era="3" aria-pressed="true">Activation, 2025–26</button></li>
+      </ul>
+      <p class="metric" id="metric" aria-live="polite"></p>
+      <div class="bar-row"><span>Before</span><div class="track"><div class="bar b" id="barB"></div></div></div>
+      <div class="bar-row"><span>After</span><div class="track"><div class="bar a" id="barA"></div></div></div>
+      <p class="ratio" id="ratio"></p>
+      <p class="how" id="how"></p>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="work-h">
+    <h2 id="work-h">What I'm building now</h2>
+    <p class="lede">Client names stay private. The problems don't need them.</p>
+
+    <article class="case">
+      <h3>An agent platform across the infusion lifecycle</h3>
+      <p class="scope">12 agents, 70 sites, 24-month rollout</p>
+      <p>Mapped a specialty-infusion operation end to end, from clinical intake through denial management, and designed an agent for each step where people were re-keying, chasing, or waiting. Sequenced the rollout so each agent pays for the next one.</p>
+    </article>
+
+    <article class="case">
+      <h3>A value-based-contract analyst that shows its work</h3>
+      <p class="scope">Regional health system, multiple payer contracts</p>
+      <p>Executives ask where they're leaving shared-savings money on the table. The agent answers with numbers that trace back to the exact query that produced them, so finance can audit the answer instead of trusting it. Built around the failure mode that kills most analytics agents: confident, ungrounded math.</p>
+    </article>
+
+    <article class="case">
+      <h3>A voice-AI outreach practice</h3>
+      <p class="scope">Multilingual outbound calling with EHR write-back</p>
+      <p>Built the practice from zero: agents that call patients for care-management enrollment, medication adherence, and screenings, then write the outcome back into the EHR so nobody has to transcribe a call. Compliance logic lives in the agent, not in a training manual.</p>
+    </article>
+  </section>
+
+  <section class="wrap" aria-labelledby="how-h">
+    <h2 id="how-h">How I run a forward-deployed team</h2>
+    <ul class="principles" role="list">
+      <li><strong>Discovery is the product.</strong> The first agent spec is usually wrong. The first week with the people doing the job usually isn't.</li>
+      <li><strong>Every pattern becomes a playbook.</strong> If we solve it twice, it gets written down: handler templates, tool specs, prompt structure. The third build starts where the second one ended.</li>
+      <li><strong>A demo isn't done.</strong> Done means a clinician or analyst uses it on a Tuesday without us in the room.</li>
+    </ul>
+  </section>
+
+  <section class="wrap" aria-labelledby="path-h">
+    <h2 id="path-h">Path</h2>
+    <ol class="timeline" role="list">
+      <li><span class="yr">2026 – now</span><div><b>Manager, Forward Deployed Engineering, Innovaccer</b><small>Pre-sales through production for healthcare AI agents.</small></div></li>
+      <li><span class="yr">2025 – 2026</span><div><b>Senior Manager, Tech Transformation, Innovaccer</b><small>GenAI-automated data engineering; led a 16-engineer Center of Excellence.</small></div></li>
+      <li><span class="yr">2023 – 2024</span><div><b>Staff Data Engineer, Innovaccer</b><small>Payer and EHR activation; an early FHIR incremental-acquisition build.</small></div></li>
+      <li><span class="yr">2020 – 2022</span><div><b>Lead Data Analyst, Innovaccer</b><small>HEDIS quality-measurement platform; clinical NLP and OCR.</small></div></li>
+      <li><span class="yr">2016 – 2020</span><div><b>Tech Lead, Risk Finance &amp; Treasury, Barclays</b><small>IFRS9 and CCAR model data across terabyte-scale portfolios.</small></div></li>
+    </ol>
+    <p style="margin-top:1.75rem">Also: co-inventor on a US patent filing for a DAG-based feature library, a research paper with Prof. Sharad Goel at Stanford, and a B.Tech in IT from JIIT Noida.</p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Based in Bengaluru, working with US health systems. The fastest way to reach me is <a href="mailto:parasgupta301@gmail.com">email</a>.</p>
+</footer>
+
+<script>
+const eras=[
+  {metric:"Data acquisition for risk models",b:30,a:1,unit:"person-days",ratio:"30×",
+   how:"Automated acquisition for UK and US credit-risk model pipelines in Python, Spark, and SAS."},
+  {metric:"EHR clinical data acquisition",b:20,a:1,unit:"relative time",ratio:"20×",
+   how:"Rebuilt clinical data acquisition with parallel extraction so it finished inside ten days.", hideUnits:true},
+  {metric:"Contract activation effort",b:80,a:34,unit:"story points",ratio:"−58%",
+   how:"Standardized payer activation into reusable pipelines, adopted across the organization."},
+  {metric:"Time to activate, data to dashboard",b:34,a:5,unit:"story points",ratio:"−85%",
+   how:"GenAI generated the joins, mappings, and transformations from business rules. Compounded with the previous era, that's about 94% less effort than where we started."}
+];
+const $=id=>document.getElementById(id);
+function show(i){
+  const e=eras[i];
+  document.querySelectorAll(".eras button").forEach(btn=>btn.setAttribute("aria-pressed",btn.dataset.era==i));
+  $("metric").textContent=e.metric;
+  $("barB").style.width="100%";
+  $("barA").style.width=Math.max(e.a/e.b*100,1)+"%";
+  $("barB").textContent=e.hideUnits?"Baseline":e.b+" "+e.unit;
+  $("barA").textContent=e.hideUnits?"":e.a+" "+e.unit;
+  $("ratio").textContent=e.ratio;
+  $("how").textContent=e.how;
+}
+document.querySelectorAll(".eras button").forEach(btn=>btn.addEventListener("click",()=>show(+btn.dataset.era)));
+show(3);
+</script>
