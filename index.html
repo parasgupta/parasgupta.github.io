@@ -16,6 +16,13 @@
 <meta property="og:image" content="https://parasgupta.github.io/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316252D'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='%23F1F3F0' text-anchor='middle'%3EPG%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Paras Gupta","url":"https://parasgupta.github.io/",
+ "image":"https://parasgupta.github.io/headshot.jpg","jobTitle":"Manager, Forward Deployed Engineering","worksFor":{"@type":"Organization","name":"Innovaccer"},
+ "knowsAbout":["Healthcare AI agents","Forward deployed engineering","Voice AI","FHIR","Data engineering"],
+ "alumniOf":{"@type":"CollegeOrUniversity","name":"Jaypee Institute of Information Technology"},
+ "sameAs":["https://linkedin.com/in/parasgupta301"]}
+</script>
 <style>
 :root{
   --paper:#F1F3F0;
@@ -52,6 +59,9 @@ a:hover{text-decoration-thickness:2px}
 .wrap{max-width:46rem;margin-inline:auto;padding-inline:1.5rem}
 
 /* Hero */
+.top{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem}
+.photo{width:9.5rem;height:9.5rem;border-radius:18px;object-fit:cover;display:block;flex-shrink:0}
+@media (max-width:560px){.top{flex-direction:column-reverse;align-items:flex-start}.photo{width:6.5rem;height:6.5rem;border-radius:14px}}
 header{padding:5.5rem 0 3.5rem}
 .name{
   font-size:clamp(3rem,11vw,6.5rem);line-height:.9;margin:0;
@@ -131,9 +141,12 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);f
 <body>
 
 <header class="wrap">
-  <h1 class="name">Paras<br>Gupta</h1>
+  <div class="top">
+    <h1 class="name">Paras<br>Gupta</h1>
+    <picture><source srcset="headshot.webp" type="image/webp"><img class="photo" src="headshot.jpg" alt="Paras Gupta" width="480" height="480"></picture>
+  </div>
   <p class="claim">I get healthcare AI agents out of the demo and into production.</p>
-  <p class="role">I lead Forward Deployed Engineering at Innovaccer: a team that scopes, builds, and ships voice and chat agents for US health systems and payers. Before that, ten years making data pipelines boringly fast at Innovaccer and Barclays.</p>
+  <p class="role">I lead Forward Deployed Engineering at Innovaccer: a team of 15+ engineers that scopes, builds, and ships voice and chat agents for US health systems and payers. Before that, ten years making data pipelines boringly fast at Innovaccer and Barclays.</p>
   <nav class="links" aria-label="Contact">
     <a href="mailto:parasgupta301@gmail.com">Email me</a>
     <a href="https://linkedin.com/in/parasgupta301">LinkedIn</a>
@@ -142,24 +155,6 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);f
 </header>
 
 <main>
-  <section class="wrap" aria-labelledby="compress-h">
-    <h2 id="compress-h">The work, in one habit: making slow things fast</h2>
-    <p class="lede">Every role I've held came down to taking a process that took weeks and making it take days, then minutes. Pick an era.</p>
-    <div class="compress">
-      <ul class="eras" role="list">
-        <li><button type="button" data-era="0" aria-pressed="false">Barclays</button></li>
-        <li><button type="button" data-era="1" aria-pressed="false">Clinical data, 2023</button></li>
-        <li><button type="button" data-era="2" aria-pressed="false">Activation, 2023–24</button></li>
-        <li><button type="button" data-era="3" aria-pressed="true">Activation, 2025–26</button></li>
-      </ul>
-      <p class="metric" id="metric" aria-live="polite"></p>
-      <div class="bar-row"><span>Before</span><div class="track"><div class="bar b" id="barB"></div></div></div>
-      <div class="bar-row"><span>After</span><div class="track"><div class="bar a" id="barA"></div></div></div>
-      <p class="ratio" id="ratio"></p>
-      <p class="how" id="how"></p>
-    </div>
-  </section>
-
   <section class="wrap" aria-labelledby="work-h">
     <h2 id="work-h">What I'm building now</h2>
 
@@ -180,7 +175,26 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);f
       <p class="scope">Multilingual outbound calling with EHR write-back</p>
       <p>Built the practice from zero: agents that call patients for care-management enrollment, medication adherence, and screenings, then write the outcome back into the EHR so nobody has to transcribe a call. Compliance logic lives in the agent, not in a training manual.</p>
     </article>
+    <p style="margin-top:2.25rem"><strong>My team has built agents for</strong> care-management outreach, Medicaid and ACO patient outreach, emergency-department utilization reduction, transitions of care, prior authorization, formulary intelligence, and claims anomaly detection, for both health systems and payers.</p>
   </section>
+  <section class="wrap" aria-labelledby="compress-h">
+    <h2 id="compress-h">The foundation: a decade of making slow things fast</h2>
+    <p class="lede">Before agents, I spent ten years in data engineering, and every role came down to the same habit: take a process that took weeks and make it take days, then minutes. It's why my team's agents are built on data that holds up. Pick an era.</p>
+    <div class="compress">
+      <ul class="eras" role="list">
+        <li><button type="button" data-era="0" aria-pressed="false">Barclays</button></li>
+        <li><button type="button" data-era="1" aria-pressed="false">Clinical data, 2023</button></li>
+        <li><button type="button" data-era="2" aria-pressed="false">Activation, 2023–24</button></li>
+        <li><button type="button" data-era="3" aria-pressed="true">Activation, 2025–26</button></li>
+      </ul>
+      <p class="metric" id="metric" aria-live="polite"></p>
+      <div class="bar-row"><span>Before</span><div class="track"><div class="bar b" id="barB"></div></div></div>
+      <div class="bar-row"><span>After</span><div class="track"><div class="bar a" id="barA"></div></div></div>
+      <p class="ratio" id="ratio"></p>
+      <p class="how" id="how"></p>
+    </div>
+  </section>
+
 
   <section class="wrap" aria-labelledby="how-h">
     <h2 id="how-h">How I run a forward-deployed team</h2>
@@ -189,6 +203,12 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);f
       <li><strong>Every pattern becomes a playbook.</strong> If we solve it twice, it gets written down: handler templates, tool specs, prompt structure. The third build starts where the second one ended.</li>
       <li><strong>A demo isn't done.</strong> Done means a clinician or analyst uses it on a Tuesday without us in the room.</li>
     </ul>
+  </section>
+
+  <section class="wrap" aria-labelledby="next-h">
+    <h2 id="next-h">What I'm looking for next</h2>
+    <p>A role leading forward-deployed or applied AI teams: the people who sit between a model and a customer's real workflow and make the two fit. Healthcare is where I've done it, and the playbook travels.</p>
+    <p><a href="mailto:parasgupta301@gmail.com?subject=Role%20conversation">Start a conversation</a></p>
   </section>
 
   <section class="wrap" aria-labelledby="path-h">
@@ -201,6 +221,7 @@ footer{padding:3rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);f
       <li><span class="yr">2016 – 2020</span><div><b>Tech Lead, Risk Finance &amp; Treasury, Barclays</b><small>IFRS9 and CCAR model data across terabyte-scale portfolios.</small></div></li>
     </ol>
     <p style="margin-top:1.75rem">Also: co-inventor on a US patent filing for a DAG-based feature library, a research paper with Prof. Sharad Goel at Stanford, and a B.Tech in IT from JIIT Noida.</p>
+    <p><strong>Toolkit:</strong> LLM agents (voice and chat), prompt and tool design, agent evaluation, AWS (Lambda, HealthLake), FHIR, Databricks, Spark, Python, SQL.</p>
   </section>
 </main>
 
